@@ -2,10 +2,10 @@ export default function Footer(){
 
     return(
         <>
-    <svg class="wave-top" viewBox="0 0 1439 147" version="1.1" xmlns="http://www.w3.org/2000/svg" >
-      <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g transform="translate(-1.000000, -14.000000)" fill-rule="nonzero">
-          <g class="wave" fill="#f8fafc">
+    <svg className="wave-top" viewBox="0 0 1439 147" version="1.1" xmlns="http://www.w3.org/2000/svg" >
+      <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
+        <g transform="translate(-1.000000, -14.000000)" fillRule="nonzero">
+          <g className="wave" fill="#f8fafc">
             <path
               d="M1440,84 C1383.555,64.3 1342.555,51.3 1317,45 C1259.5,30.824 1206.707,25.526 1169,22 C1129.711,18.326 1044.426,18.475 980,22 C954.25,23.409 922.25,26.742 884,32 C845.122,37.787 818.455,42.121 804,45 C776.833,50.41 728.136,61.77 713,65 C660.023,76.309 621.544,87.729 584,94 C517.525,105.104 484.525,106.438 429,108 C379.49,106.484 342.823,104.484 319,102 C278.571,97.783 231.737,88.736 205,84 C154.629,75.076 86.296,57.743 0,32 L0,0 L1440,0 L1440,84 Z"
               ></path>
@@ -23,70 +23,70 @@ export default function Footer(){
         </g>
       </g>
     </svg>
-    <section class="container mx-auto text-center py-6 mb-12">
-    <div class="w-full flex flex-col md:flex-row py-6">
-          <div class="flex-1 mb-6 text-white">
-            <a class="text-pink-600 no-underline hover:no-underline font-bold text-2xl lg:text-4xl" href="#">
-              <svg class="h-8 fill-current inline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512.005 512.005">
+    <section className="container mx-auto text-center py-6 mb-12">
+    <div className="w-full flex flex-col md:flex-row py-6">
+          <div className="flex-1 mb-6 text-white">
+            <a className="text-pink-600 no-underline hover:no-underline font-bold text-2xl lg:text-4xl" href="#">
+              <svg className="h-8 fill-current inline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512.005 512.005">
                 <rect fill="#2a2a31" x="16.539" y="425.626" width="479.767" height="50.502" transform="matrix(1,0,0,1,0,0)" />
                 <path
-                  class="plane-take-off"
+                  className="plane-take-off"
                   d=" M 510.7 189.151 C 505.271 168.95 484.565 156.956 464.365 162.385 L 330.156 198.367 L 155.924 35.878 L 107.19 49.008 L 211.729 230.183 L 86.232 263.767 L 36.614 224.754 L 0 234.603 L 45.957 314.27 L 65.274 347.727 L 105.802 336.869 L 240.011 300.886 L 349.726 271.469 L 483.935 235.486 C 504.134 230.057 516.129 209.352 510.7 189.151 Z "
                 />
               </svg>
               LANDING
             </a>
           </div>
-          <div class="flex-1">
-            <p class="uppercase text-gray-500 md:mb-6">Links</p>
-            <ul class="list-reset mb-6">
-              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                <a href="#" class="no-underline hover:underline text-gray-200 hover:text-pink-500">FAQ</a>
+          <div className="flex-1">
+            <p className="uppercase text-gray-500 md:mb-6">Links</p>
+            <ul className="list-reset mb-6">
+              <li className="mt-2 inline-block mr-2 md:block md:mr-0">
+                <a href="#" className="no-underline hover:underline text-gray-200 hover:text-pink-500">FAQ</a>
               </li>
-              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                <a href="#" class="no-underline hover:underline text-gray-200 hover:text-pink-500">Help</a>
+              <li className="mt-2 inline-block mr-2 md:block md:mr-0">
+                <a href="#" className="no-underline hover:underline text-gray-200 hover:text-pink-500">Help</a>
               </li>
-              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                <a href="#" class="no-underline hover:underline text-gray-200 hover:text-pink-500">Support</a>
-              </li>
-            </ul>
-          </div>
-          <div class="flex-1">
-            <p class="uppercase text-gray-500 md:mb-6">Legal</p>
-            <ul class="list-reset mb-6">
-              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                <a href="#" class="no-underline hover:underline text-gray-200 hover:text-pink-500">Terms</a>
-              </li>
-              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                <a href="#" class="no-underline hover:underline text-gray-200 hover:text-pink-500">Privacy</a>
+              <li className="mt-2 inline-block mr-2 md:block md:mr-0">
+                <a href="#" className="no-underline hover:underline text-gray-200 hover:text-pink-500">Support</a>
               </li>
             </ul>
           </div>
-          <div class="flex-1">
-            <p class="uppercase text-gray-500 md:mb-6">Social</p>
-            <ul class="list-reset mb-6">
-              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                <a href="#" class="no-underline hover:underline text-gray-200 hover:text-pink-500">Facebook</a>
+          <div className="flex-1">
+            <p className="uppercase text-gray-500 md:mb-6">Legal</p>
+            <ul className="list-reset mb-6">
+              <li className="mt-2 inline-block mr-2 md:block md:mr-0">
+                <a href="#" className="no-underline hover:underline text-gray-200 hover:text-pink-500">Terms</a>
               </li>
-              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                <a href="#" class="no-underline hover:underline text-gray-200 hover:text-pink-500">Linkedin</a>
-              </li>
-              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                <a href="#" class="no-underline hover:underline text-gray-200 hover:text-pink-500">Twitter</a>
+              <li className="mt-2 inline-block mr-2 md:block md:mr-0">
+                <a href="#" className="no-underline hover:underline text-gray-200 hover:text-pink-500">Privacy</a>
               </li>
             </ul>
           </div>
-          <div class="flex-1">
-            <p class="uppercase text-gray-500 md:mb-6">Company</p>
-            <ul class="list-reset mb-6">
-              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                <a href="#" class="no-underline hover:underline text-gray-200 hover:text-pink-500">Official Blog</a>
+          <div className="flex-1">
+            <p className="uppercase text-gray-500 md:mb-6">Social</p>
+            <ul className="list-reset mb-6">
+              <li className="mt-2 inline-block mr-2 md:block md:mr-0">
+                <a href="#" className="no-underline hover:underline text-gray-200 hover:text-pink-500">Facebook</a>
               </li>
-              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                <a href="#" class="no-underline hover:underline text-gray-200 hover:text-pink-500">About Us</a>
+              <li className="mt-2 inline-block mr-2 md:block md:mr-0">
+                <a href="#" className="no-underline hover:underline text-gray-200 hover:text-pink-500">Linkedin</a>
               </li>
-              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                <a href="#" class="no-underline hover:underline text-gray-200 hover:text-pink-500">Contact</a>
+              <li className="mt-2 inline-block mr-2 md:block md:mr-0">
+                <a href="#" className="no-underline hover:underline text-gray-200 hover:text-pink-500">Twitter</a>
+              </li>
+            </ul>
+          </div>
+          <div className="flex-1">
+            <p className="uppercase text-gray-500 md:mb-6">Company</p>
+            <ul className="list-reset mb-6">
+              <li className="mt-2 inline-block mr-2 md:block md:mr-0">
+                <a href="#" className="no-underline hover:underline text-gray-200 hover:text-pink-500">Official Blog</a>
+              </li>
+              <li className="mt-2 inline-block mr-2 md:block md:mr-0">
+                <a href="#" className="no-underline hover:underline text-gray-200 hover:text-pink-500">About Us</a>
+              </li>
+              <li className="mt-2 inline-block mr-2 md:block md:mr-0">
+                <a href="#" className="no-underline hover:underline text-gray-200 hover:text-pink-500">Contact</a>
               </li>
             </ul>
           </div>
