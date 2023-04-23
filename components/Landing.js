@@ -19,7 +19,7 @@ export default function Landing() {
           </button>
         </div>
         <div className="w-full md:w-3/5  xl:pt-[150px] text-center">
-        <Image lass="w-full md:w-4/5 z-50" width={1000}  src={bt}  alt="Picture" />
+        <Image className="w-full md:w-[800px] z-50" width={1000}  src={bt}  alt="Picture" />
         </div>
       </div>
     </div>

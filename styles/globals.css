@@ -2,10 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
-    background: linear-gradient(60deg, #242424 50%, #ffffff 150%);
+body {
+  background: linear-gradient(60deg, #242424 50%, #ffffff 150%);
 }
-.gradient{
-    background: linear-gradient(60deg, #ffffff 0%, #242424 100%);
+.gradient {
+  background: linear-gradient(60deg, #ffffff 0%, #242424 100%);
+}
 
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #f0dcae;
 }
