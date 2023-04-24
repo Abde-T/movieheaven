@@ -10,7 +10,7 @@ export default function Trending() {
 
   useEffect(() => {
     const fetchMovies = async () => {
-      const { data } = await tmdb.get("trending/movie/week");
+      const { data } = await tmdb.get("trending/movie/day");
       setMovies(data.results);
     };
     fetchMovies();
@@ -26,9 +26,9 @@ export default function Trending() {
           <div className="w-full mb-4">
             <div className="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
           </div>
-         <div  className="w-full  md:w-1/3 p-6 flex items-center flex-row overflow-x-scroll flex-grow flex-shrink">
-          {movies.slice(0, 10).map((movie) => (
-              <div  className=" md:w-1/3 p-6 flex items-center flex-col flex-grow flex-shrink">
+         <div  className="w-full  md:w-1/3 p-6 flex items-center flex-wrap flex-grow flex-shrink">
+          {movies.slice(0, 4).map((movie) => (
+              <div  className=" md:w-3/6 xl:w-1/4 p-6 w-1/2 flex items-center ">
               <div className="min-w-[150px] w-[300px] h-[500px]  rounded-t rounded-b-none ">
                 <a
                   href="#"

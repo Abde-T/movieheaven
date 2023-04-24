@@ -2,6 +2,7 @@ import Image from "next/image";
 import star from "../public/assets/star.png";
 import spider from "../public/assets/spider.jpg";
 import avenger from "../public/assets/avenger.jpg";
+import Link from "next/link";
 
 export default function Popular() {
   return (
@@ -9,7 +10,7 @@ export default function Popular() {
       <section className="bg-gray-200 py-8">
         <div className="container mx-auto px-2 pt-4 pb-12 text-gray-800">
           <h2 className="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
-            Best Franchises
+            Top Franchises
           </h2>
           <div className="w-full mb-4">
             <div className="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
@@ -27,9 +28,11 @@ export default function Popular() {
               </div>
               <div className="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
                 <div className="flex items-center justify-center">
+                <Link href="/StarWars">
                   <button className="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
                     See More
                   </button>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -43,9 +46,11 @@ export default function Popular() {
               </div>
               <div className="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
                 <div className="flex items-center justify-center">
+                <Link href="/spiderman">
                   <button className="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
                     See More
                   </button>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -60,9 +65,11 @@ export default function Popular() {
               </div>
               <div className="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
                 <div className="flex items-center justify-center">
+                <Link href="/Avengers">
                   <button className="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
                     See More
                   </button>
+                  </Link>
                 </div>
               </div>
             </div>

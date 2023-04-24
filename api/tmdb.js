@@ -1,5 +1,4 @@
 import axios from "axios";
-import { headers } from "next/dist/client/components/headers";
 
 export default axios.create({
     baseURL: 'https://api.themoviedb.org/3',

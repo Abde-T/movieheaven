@@ -5,12 +5,12 @@ import { closeLoginModal, closeSignupModal } from "@/redux/modalSlice";
 import { signOutUser } from "@/redux/userSlice";
 import { auth } from "@/firebase";
 import { signOut } from "firebase/auth";
+import Link from "next/link";
 
 export default function Nav() {
   const username = useSelector((state) => state.user.username);
 
   const dispatch = useDispatch();
-
   const user = useSelector((state) => state.user);
 
   async function handleSignOut() {
@@ -22,12 +22,12 @@ export default function Nav() {
 
   return (
     <>
-      <nav id="header" className="fixed w-full z-30 top-0 text-white">
+      <nav id="header" className="w-full absolute z-30 top-0 text-white">
         <div className="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2">
           <div className="pl-4 flex items-center">
-            <a
+            <Link
               className="toggleColour text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl"
-              href="#"
+              href="/"
             >
               <svg
                 className="h-8 fill-current inline"
@@ -48,7 +48,7 @@ export default function Nav() {
                 />
               </svg>
               LANDING
-            </a>
+            </Link>
           </div>
           <div className="block lg:hidden pr-4">
             <button

@@ -1,12 +1,36 @@
+import { useDispatch, useSelector } from 'react-redux';
 import bt from '../public/assets/bt.png'
 import Image from 'next/image'
+import SearchBar from './SearchBar';
+import { useState } from 'react';
 
-export default function Landing() {
+export default function Landing({ data, id }) {
+  const username = useSelector((state) => state.user.username);
+  
+  const [query, setQuery] = useState('');
+  const [results, setResults] = useState([]);
+  const [page, setPage] = useState(1);
+
+
+  async function fetchResults() {
+    const apiKey = '5ab490b5f6681ee3678d3ad287d1d366';
+    const apiUrl = `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${query}&page=${page}`;
+    const res = await fetch(apiUrl);
+    const data = await res.json();
+    setResults(data.results);
+  }
+
+
+  function handleClick() {
+    fetchResults();
+    setPage(page + 1);
+
+  }
     return (
       <>
         <div className="pt-24 bg-center bg-cover bg-no-repeat  bg-[url('../public/assets/144563.jpg')] ">
       <div className="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center">
-        <div className="xl:text-[#242424] text-white flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left">
+        <div className="xl:text-[#f0dcae] text-white flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left">
           <p className=" uppercase tracking-loose w-full">What business are you?</p>
           <h1 className=" my-4 text-5xl font-bold leading-tight">
             Main Hero Message to sell yourself!
@@ -14,12 +38,22 @@ export default function Landing() {
           <p className="leading-normal text-2xl mb-8">
             Sub-hero message, not too long and not too short. Make it just right!
           </p>
+
+          {username && (
+          <div className='z-50'>
+          <SearchBar
+          handleClick={handleClick}
+          query={query}
+          setQuery={setQuery}
+          />
+          </div>)}
+
           <button className="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
             Subscribe
           </button>
         </div>
         <div className="w-full md:w-3/5  xl:pt-[150px] text-center">
-        <Image className="w-full md:w-[800px] z-50" width={1000}  src={bt}  alt="Picture" />
+        <Image className="w-full md:w-[800px] z-40" width={1000}  src={bt}  alt="Picture" />
         </div>
       </div>
     </div>
