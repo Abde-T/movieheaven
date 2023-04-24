@@ -1,6 +1,8 @@
 import tmdb from "@/api/tmdb";
 import Footer from "@/components/Footer";
 import Nav from "@/components/Nav";
+import ProgressCircle from "@/ui/ProgressCirlce";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 export default function SpiderMan() {
@@ -36,19 +38,26 @@ export default function SpiderMan() {
             {movies.slice(0,12).map((movie) => (
               <div className="md:w-3/6 xl:w-1/4 p-6 w-1/2 flex items-center">
                 <div className="min-w-[150px] w-[300px] h-[500px]  rounded-t rounded-b-none ">
-                  <a
-                    href="#"
+                <Link
+                    href={`/movie/${movie.id}`}
                     className="flex justify-center flex-wrap no-underline hover:no-underline"
                   >
-                    <img
-                      className="rounded-[20px]"
-                      width={300}
-                      src={ getPoster(movie.poster_path)}
-                    />
+                   <div className="relative ">
+                      <img
+                        className=" rounded-[20px]"
+                        width={300}
+                        src={getPoster(movie.backdrop_path)}
+                      />
+                      <div className="absolute bottom-[-40px] translate-y-[-50%] translate-x-[-50%] right-[-40px]">
+                        <ProgressCircle
+                          percent={Math.floor(movie.vote_average * 10)}
+                        />
+                      </div>
+                    </div>
                     <div className="w-full font-bold text-xl mt-5 text-[#f0dcae] px-6">
                       {movie.title}
                     </div>
-                  </a>
+                  </Link>
                 </div>
               </div>
             ))}
