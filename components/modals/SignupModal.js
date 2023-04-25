@@ -44,7 +44,7 @@ export default function SignupModal() {
   }
 
   async function handleGuestSignIn() {
-    await signInWithEmailAndPassword(auth, "guest15510@gmail.com", "123456");
+    await signInWithEmailAndPassword(auth, "guest150@gmail.com", "123456");
   }
 
   useEffect(() => {
@@ -79,15 +79,16 @@ export default function SignupModal() {
         open={isOpen}
         onClose={() => dispatch(closeSignupModal())}
         className="flex justify-center items-center"
+        data-aos="zoom-out"  
       >
         <div
-          className="w-[90%] h-[600px] bg-[#242424] text-white md:w-[560px] md:h-[600px] border border-gray-700 rounded-lg
+          className="w-[90%] h-[550px] bg-[#242424] text-white md:w-[560px] md:h-[600px] border border-[#f0dcae] rounded-lg
         flex justify-center
         "
         >
           <div className="w-[90%] mt-8 flex flex-col">
             <button
-              className="bg-gray-300 text-black w-full font-bold
+              className="bg-[#f0dcae] text-black w-full font-bold
                 text-lg p-2 rounded-md
                 "
               onClick={handleGuestSignIn}
@@ -95,30 +96,30 @@ export default function SignupModal() {
               Sign In as Guest
             </button>
             <h1 className="text-center mt-4 font-bold text-lg">or</h1>
-            <h1 className="mt-4 font-bold text-4xl text-gray-300">
+            <h1 className="mt-4 font-bold text-4xl text-[#f0dcae]">
               Create your account
             </h1>
             <input
               placeholder="Full Name"
-              className="h-10 mt-8 rounded-md bg-transparent border border-gray-700 p-6"
+              className="h-10 mt-8 rounded-md bg-transparent border border-[#f0dcae] p-6"
               type={"text"}
               onChange={(e) => setName(e.target.value)}
             />
             <input
               placeholder="Email"
-              className="h-10 mt-8 rounded-md bg-transparent border border-gray-700 p-6"
+              className="h-10 mt-8 rounded-md bg-transparent border border-[#f0dcae] p-6"
               type={"email"}
               onChange={(e) => setEmail(e.target.value)}
             />
             <input
               placeholder="Password"
-              className="h-10 mt-8 rounded-md bg-transparent border border-gray-700 p-6"
+              className="h-10 mt-8 rounded-md bg-transparent border border-[#f0dcae] p-6"
               type={"password"}
               onChange={(e) => setPassword(e.target.value)}
             />
 
             <button
-              className="bg-gray-300 text-black w-full font-bold
+              className="bg-[#f0dcae] text-black w-full font-bold
                 text-lg p-2 mt-8 rounded-md
                 "
               onClick={handleSingUp}

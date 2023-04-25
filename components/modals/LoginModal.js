@@ -21,7 +21,7 @@ export default function LoginModal() {
   }
 
   async function handleGuestSignIn() {
-    await signInWithEmailAndPassword(auth, "guest15510@gmail.com", "123456");
+    await signInWithEmailAndPassword(auth, "guest150@gmail.com", "123456");
   }
 
   return (
@@ -39,31 +39,32 @@ export default function LoginModal() {
         open={isOpen}
         onClose={() => dispatch(closeLoginModal())}
         className="flex justify-center items-center"
+        data-aos="zoom-out"      
       >
         <div
-          className="w-[90%] h-[600px] bg-[#242424] text-white md:w-[560px] md:h-[600px] border border-gray-700 rounded-lg
+          className="w-[90%] h-[500px] bg-[#242424] text-white md:w-[560px] md:h-[600px] border border-[#f0dcae] rounded-lg
         flex justify-center
         "
         >
           <div className="w-[90%] mt-8 flex flex-col">
-            <h1 className="mt-4 font-bold text-4xl text-gray-300">
+            <h1 className="mt-4 font-bold text-4xl text-[#f0dcae]">
               Sign in to your account
             </h1>
             <input
               placeholder="Email"
-              className="h-10 mt-8 rounded-md bg-transparent border border-gray-700 p-6"
+              className="h-10 mt-8 rounded-md bg-transparent border border-[#f0dcae] p-6"
               type={"email"}
               onChange={(e) => setEmail(e.target.value)}
             />
             <input
               placeholder="Password"
-              className="h-10 mt-8 rounded-md bg-transparent border border-gray-700 p-6"
+              className="h-10 mt-8 rounded-md bg-transparent border border-[#f0dcae] p-6"
               type={"password"}
               onChange={(e) => setPassword(e.target.value)}
             />
 
             <button
-              className="bg-gray-300 text-black w-full font-bold
+              className="bg-[#f0dcae] text-black w-[50%] mx-auto font-bold
                 text-lg p-2 mt-8 rounded-md
                 "
               onClick={handleSignIn}
@@ -73,7 +74,7 @@ export default function LoginModal() {
 
             <h1 className="text-center mt-8 font-bold text-lg">or</h1>
             <button
-              className="bg-gray-300 text-black w-full font-bold
+              className="bg-[#f0dcae] text-black w-[50%] mx-auto font-bold
                 text-lg p-2 rounded-md mt-4
                 "
               onClick={handleGuestSignIn}

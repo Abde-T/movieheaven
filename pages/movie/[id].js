@@ -3,8 +3,10 @@ import Nav from "@/components/Nav";
 import SearchBar from "@/components/SearchBar";
 import ProgressCircle from "@/ui/ProgressCirlce";
 import Image from "next/image";
+import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
+import logo from "../../public/assets/Popcorn.png";
 
 function Movie() {
   const getPoster = (poster) => {
@@ -44,8 +46,17 @@ function Movie() {
   return (
     <>
       <div className="py-10 relative">
-      <Nav />
-        <div className="z-40  absolute top-[55%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
+        <Nav />
+        <div className="z-40  absolute top-[75%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
+          <Link href="/">
+            <Image
+              className="w-[100px] absolute top-[-35%] left-[-70%] z-40 hover:scale-105 "
+              width={1000}
+              src={logo}
+              alt="Picture"
+            />
+          </Link>
+
           <SearchBar
             handleClick={handleClick}
             query={query}
@@ -80,20 +91,17 @@ function Movie() {
 
               <button
                 className="text-xs md:text-base bg-black/30 text-[#f9f9f9] border border-[#f9f9f9] flex items-center justify-center py-2.5 px-6 rounded hover:bg-[#c6c6c6]"
-                onClick={() => setShowPlayer(true)}
+                
               >
                 <img alt="" className="h-6 md:h-8" />
                 <span className="uppercase font-medium tracking-wide">
                   Trailer
                 </span>
               </button>
-              <div className="rounded-full border-2 border-white flex items-center justify-center w-11 h-11 cursor-pointer bg-black/60">
+              <div className="cursor-pointer hover:scale-105">
+                <ProgressCircle percent={Math.floor(movie.vote_average*10)} />
               </div>
-              <div>
-                        <ProgressCircle
-                          percent={Math.floor(movie.vote_average * 10)}
-                        />
-              </div>
+             
             </div>
 
             <p className="text-xs md:text-xl text-white">

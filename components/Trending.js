@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import ProgressCircle from "@/ui/ProgressCirlce";
 import Slider from "react-slick";
+import { useDispatch, useSelector } from "react-redux";
+import { openLoginModal } from "@/redux/modalSlice";
 
 
 export default function Trending() {
@@ -19,6 +21,16 @@ export default function Trending() {
     };
     fetchMovies();
   }, []);
+
+  const username = useSelector((state) => state.user.username);
+  const dispatch = useDispatch()
+
+  function openmodal() {
+    if (!username) {
+      dispatch(openLoginModal())
+      return
+    }
+  }
 
   const settings = {
     dots: false,
@@ -62,8 +74,8 @@ export default function Trending() {
 
   return (
     <>
-      <section className="bg-white border-b py-8" id="Trending">
-        <div className="container mx-auto flex flex-wrap pt-4 pb-12">
+      <section  className="bg-white border-b py-8" id="Trending">
+        <div data-aos="zoom-in" className="container mx-auto flex flex-wrap pt-4 pb-12">
           <h2 className="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
             Today's pick
           </h2>
@@ -79,16 +91,18 @@ export default function Trending() {
               >
                 <div className="relative rounded-t rounded-b-none flex flex-col justify-center items-center">
                   <Link
+                   onClick={openmodal}
                     href={`/movie/${movie.id}`}
                     className="flex items-center flex-col"
                     >
                     <div className="relative ">
                       <img
+                     
                         className=" rounded-[20px] w-[300px]"
                        
                         src={getPoster(movie.backdrop_path)}
                         />
-                      <div className="absolute bottom-[-40px] translate-y-[-50%] translate-x-[-50%] right-[-40px]">
+                      <div className="cursor-pointer hover:scale-105 absolute bottom-[-40px] translate-y-[-50%] translate-x-[-50%] right-[-40px]">
                         <ProgressCircle
                           percent={Math.floor(movie.vote_average * 10)}
                           />

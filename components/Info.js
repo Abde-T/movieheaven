@@ -6,9 +6,9 @@ export default function Info({ data }) {
     <>
       <section className="bg-white border-b py-8">
         <div className="container max-w-5xl mx-auto m-8">
-          <h2 className="w-full my-2 p-5 text-5xl font-bold leading-relaxed	 text-center text-[#242424]">
+          <h2 data-aos="zoom-in" className="w-full my-2 p-5 text-4xl font-bold leading-relaxed	 text-center text-[#242424]">
             why choose <br className="md:hidden mb-2" />{" "}
-            <span className="border bg-[#242424] rounded-b-[30px] p-1 text-[#f0dcae]">
+            <span className="border bg-[#242424] rounded-b-[20px] p-1 text-[#f0dcae]">
               {" "}
               Movie Heaven ?{" "}
             </span>
@@ -17,8 +17,8 @@ export default function Info({ data }) {
             <div className="h-1 mx-auto gradient w-64 opacity-55 my-5 py-0 rounded-t"></div>
           </div>
           <div className="flex flex-wrap justify-around">
-          <div className="m-10 border w-full md:w-[250px]  rounded-2xl  shadow-2xl shadow-[#242424]   h-[250px] bg-[#242424] border-white border-2 flex flex-col justify-around items-center ">
-            <div className="text-3xl text-[#242424] mt-3  border shadow-lg shadow-[#f0dcae] rounded-[35px] border border-2 bg-[#f0dcae] w-[100px] h-[100px] flex justify-center items-center">
+          <div data-aos="fade-right" className="m-10 border w-full md:w-[250px]  rounded-2xl  shadow-2xl shadow-[#242424]   h-[250px] bg-[#242424] border-white border-2 flex flex-col justify-around items-center ">
+            <div className="text-3xl text-[#242424] mt-3  border shadow-lg shadow-[#f0dcae] rounded-[10px] border border-2 bg-[#f0dcae] w-[70px] h-[70px] flex justify-center items-center">
               <FontAwesomeIcon icon={faBolt} />
             </div>
             <h3 className="text-white text-2xl"> Easy and quick</h3>
@@ -27,8 +27,8 @@ export default function Info({ data }) {
               Get access to the movie you desire instantly.
             </p>
           </div>
-          <div className="m-10 border w-full md:w-[250px] rounded-2xl  shadow-2xl shadow-[#242424]  h-[250px] bg-[#242424] border-white border-2 flex flex-col justify-around items-center ">
-            <div className="text-3xl text-[#242424] mt-3 border shadow-lg shadow-[#f0dcae] rounded-[35px] border border-2 bg-[#f0dcae] w-[100px] h-[100px] flex justify-center items-center">
+          <div data-aos="zoom-in" className="m-10 border w-full md:w-[250px] rounded-2xl  shadow-2xl shadow-[#242424]  h-[250px] bg-[#242424] border-white border-2 flex flex-col justify-around items-center ">
+            <div className="text-3xl text-[#242424] mt-3 border shadow-lg shadow-[#f0dcae] rounded-[10px] border border-2 bg-[#f0dcae] w-[70px] h-[70px] flex justify-center items-center">
               <FontAwesomeIcon icon={faFilm} />
             </div>
             <h3 className="text-white text-2xl">10,000+ movies</h3>
@@ -36,8 +36,8 @@ export default function Info({ data }) {
               Movie heaven has movies in all your favourite categories.
             </p>
           </div>
-          <div className="m-10 border w-full md:w-[250px]  rounded-2xl  shadow-2xl shadow-[#242424] h-[250px] bg-[#242424] border-white border-2 flex flex-col justify-around items-center ">
-            <div className="text-3xl text-[#242424] mt-3  border shadow-lg shadow-[#f0dcae] rounded-[35px] border border-2 bg-[#f0dcae] w-[100px] h-[100px] flex justify-center items-center">
+          <div data-aos="fade-left" className="m-10 border w-full md:w-[250px]  rounded-2xl  shadow-2xl shadow-[#242424] h-[250px] bg-[#242424] border-white border-2 flex flex-col justify-around items-center ">
+            <div className="text-3xl text-[#242424] mt-3  border shadow-lg shadow-[#f0dcae] rounded-[10px] border border-2 bg-[#f0dcae] w-[70px] h-[70px] flex justify-center items-center">
               <FontAwesomeIcon icon={faGaugeHigh} />
             </div>
             <h3 className="text-white text-2xl">High quality</h3>

@@ -46,9 +46,6 @@ export default function Footer() {
                 alt="Picture"
               />
             </Link>
-            <h1 className="my-4 text-[#f0dcae] text-3xl font-bold leading-tight hover:scale-105">
-              Movie <br /> Heaven
-            </h1>
           </div>
           <div className="flex-1">
             <p className="uppercase text-gray-500 md:mb-6">Links</p>

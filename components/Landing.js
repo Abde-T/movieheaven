@@ -30,27 +30,48 @@ export default function Landing({ data, id }) {
 
   return (
     <>
-      <div className="pt-24 bg-center bg-cover bg-no-repeat  bg-[url('../public/assets/144563.jpg')] ">
-        <div className="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center">
-          <div className="text-[#f0dcae] flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left">
+      <div  className="pt-24 h-[90vh] flex flex-col justify-around items-center bg-center bg-cover bg-no-repeat  bg-[url('../public/assets/144563.jpg')] ">
+        <div className="container  relative  px-3 mx-auto flex flex-wrap flex-col justify-evenly  h-full md:flex-row items-center">
+          <div className="text-[#f0dcae] flex flex-col w-full h-3/5  md:w-2/5 justify-around items-start text-center md:text-left">
             <div className="flex">
+
+            <ul data-aos="fade-right" className="hidden text-xl lg:block absolute top-[-50px] left-0 lg:flex  ">
+              <li className="mr-3">
+                <a
+                  className="inline-block font-bold text-[#f0dcae] no-underline hover:text-white hover:text-underline py-2 px-4"
+                  href="#Trending"
+                >
+                  Trending
+                </a>
+              </li>
+              <li className="mr-3">
+                <a
+                  className="inline-block font-bold text-[#f0dcae] no-underline hover:text-white hover:text-underline py-2 px-4"
+                  href="#Franchises"
+                >
+                  Top Franchises
+                </a>
+              </li>
+            </ul>
+
               <Link href="/">
                 <Image
-                  className="w-[100px] z-40 hover:scale-105"
+                data-aos="zoom-in"
+                  className="w-[100px] z-40 hover:scale-105 "
                   width={1000}
                   src={logo}
                   alt="Picture"
                 />
               </Link>
-              <h1 className="my-4 text-3xl font-bold leading-tight hover:scale-105">
+              <h1 data-aos="zoom-in" className="my-4 text-3xl font-bold leading-tight hover:scale-105">
                 Movie <br /> Heaven
               </h1>
             </div>
-            <h1 className=" my-4 text-2xl font-bold leading-tight">
+            <h1 data-aos="zoom-in" className=" my-4 text-2xl font-bold leading-tight">
               Movie Heaven <span className="text-white">  best place to watch all of your favorite movies </span>
             </h1>
             {username && (
-              <div className="z-50">
+              <div data-aos="zoom-in" className="z-50">
                 <SearchBar
                   handleClick={handleClick}
                   query={query}
@@ -62,9 +83,9 @@ export default function Landing({ data, id }) {
             {!username && <LoginModal />}
 
           </div>
-          <div className="w-full md:w-3/5  xl:pt-[150px] text-center">
+          <div data-aos="zoom-in" className="w-full md:w-3/5  xl:pt-[150px] text-center">
             <Image
-              className="w-full md:w-[800px] z-40"
+              className="w-full md:w-[700px] "
               width={1000}
               src={bt}
               alt="Picture"
@@ -72,7 +93,7 @@ export default function Landing({ data, id }) {
           </div>
         </div>
       </div>
-      <div className="relative -mt-12 lg:-mt-24">
+      <div className="relative z-30 -mt-12 lg:-mt-24">
         <svg
           viewBox="0 0 1428 174"
           version="1.1"
