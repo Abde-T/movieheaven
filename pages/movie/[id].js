@@ -7,6 +7,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import logo from "../../public/assets/Popcorn.png";
+import Trending from "@/components/Trending";
 
 function Movie() {
   const getPoster = (poster) => {
@@ -85,7 +86,7 @@ function Movie() {
             </h1>
             <div className="flex items-center space-x-3 md:space-x-5">
               <button className="text-xs md:text-base bg-[#f9f9f9] text-black flex items-center justify-center py-2.5 px-6 rounded hover:bg-[#c6c6c6]">
-                <img alt="Picture" className="h-6 md:h-8" />
+                
                 <span className="uppercase font-medium tracking-wide">
                   Play
                 </span>
@@ -95,7 +96,7 @@ function Movie() {
                 className="text-xs md:text-base bg-black/30 text-[#f9f9f9] border border-[#f9f9f9] flex items-center justify-center py-2.5 px-6 rounded hover:bg-[#c6c6c6]"
                 
               >
-                <img alt="Picture" className="h-6 md:h-8" />
+               
                 <span className="uppercase font-medium tracking-wide">
                   Trailer
                 </span>
@@ -116,6 +117,7 @@ function Movie() {
             </h4>
           </div>
         </section>
+        <Trending/>
         <Footer />
       </div>
     </>

@@ -31,11 +31,11 @@ export default function Landing({ data, id }) {
   return (
     <>
       <div  className="pt-24 h-[90vh] flex flex-col justify-around items-center bg-center bg-cover bg-no-repeat  bg-[url('../public/assets/144563.jpg')] ">
-        <div className="container  relative  px-3 mx-auto flex flex-wrap flex-col justify-evenly  h-full md:flex-row items-center">
-          <div className="text-[#f0dcae] flex flex-col w-full h-3/5  md:w-2/5 justify-around items-start text-center md:text-left">
+        <div className="container   relative  px-3 mx-auto flex flex-wrap flex-col justify-evenly  h-full md:flex-row items-center">
+          <div className="text-[#f0dcae]  flex flex-col w-full h-3/5  md:w-2/5 justify-around items-start text-center md:text-left">
             <div className="flex">
 
-            <ul data-aos="fade-right" className="hidden text-xl lg:block absolute top-[-50px] left-0 lg:flex  ">
+            <ul data-aos="fade-right" className="hidden text-xl  absolute top-[-50px] left-0 lg:flex  ">
               <li className="mr-3">
                 <a
                   className="inline-block font-bold text-[#f0dcae] no-underline hover:text-white hover:text-underline py-2 px-4"
@@ -83,9 +83,9 @@ export default function Landing({ data, id }) {
             {!username && <LoginModal />}
 
           </div>
-          <div data-aos="zoom-in" className="w-full md:w-3/5  xl:pt-[150px] text-center">
+          <div data-aos="zoom-in" className=" w-full md:w-3/5  text-center">
             <Image
-              className="w-full md:w-[700px] "
+              className="w-[90%]"
               width={1000}
               src={bt}
               alt="Picture"

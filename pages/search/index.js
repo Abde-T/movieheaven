@@ -7,6 +7,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import logo from "../../public/assets/Popcorn.png";
 import Image from "next/image";
+import Trending from "@/components/Trending";
 
 export default function search() {
   const getPoster = (poster) => {
@@ -55,7 +56,7 @@ export default function search() {
         </div>
       </div>
 
-      <section className=" flex flex-col justify-center items-center  ">
+      <section className="my-6 flex flex-col justify-center items-center  ">
         <div className="container  mx-auto flex flex-wrap pt-4 pb-12">
           <h2 className="w-full my-2 text-5xl font-bold leading-tight text-left text-[#f0dcae]">
             Search Result: {query}
@@ -103,7 +104,7 @@ export default function search() {
       
       </section>
 
-
+      <Trending/>
       <Footer />
     </>
   );
