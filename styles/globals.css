@@ -6,7 +6,6 @@
 
 body {
   background: linear-gradient(60deg, #242424 50%, #ffffff 150%);
-  overflow-x: hidden;
 }
 .gradient {
   background: linear-gradient(60deg, #ffffff 0%, #242424 100%);
