@@ -24,32 +24,6 @@ export default function Nav() {
     <>
       <nav id="header" className="w-full absolute z-30 top-0 text-white">
         <div className="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2">
-          <div className="pl-4 flex items-center">
-            <Link
-              className="toggleColour text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl"
-              href="/"
-            >
-              <svg
-                className="h-8 fill-current inline"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 512.005 512.005"
-              >
-                <rect
-                  fill="#2a2a31"
-                  x="16.539"
-                  y="425.626"
-                  width="479.767"
-                  height="50.502"
-                  transform="matrix(1,0,0,1,0,0)"
-                />
-                <path
-                  className="plane-take-off"
-                  d=" M 510.7 189.151 C 505.271 168.95 484.565 156.956 464.365 162.385 L 330.156 198.367 L 155.924 35.878 L 107.19 49.008 L 211.729 230.183 L 86.232 263.767 L 36.614 224.754 L 0 234.603 L 45.957 314.27 L 65.274 347.727 L 105.802 336.869 L 240.011 300.886 L 349.726 271.469 L 483.935 235.486 C 504.134 230.057 516.129 209.352 510.7 189.151 Z "
-                />
-              </svg>
-              LANDING
-            </Link>
-          </div>
           <div className="block lg:hidden pr-4">
             <button
               id="nav-toggle"
@@ -72,26 +46,18 @@ export default function Nav() {
             <ul className="list-reset lg:flex justify-end flex-1 items-center ">
               <li className="mr-3">
                 <a
-                  className="inline-block py-2 px-4 text-[#f0dcae] font-bold no-underline"
-                  href="#"
+                  className="inline-block font-bold text-[#f0dcae] no-underline hover:text-white hover:text-underline py-2 px-4"
+                  href="#Trending"
                 >
-                  Active
+                  Trending
                 </a>
               </li>
               <li className="mr-3">
                 <a
-                  className="inline-block text-[#f0dcae] no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
-                  href="#"
+                  className="inline-block font-bold text-[#f0dcae] no-underline hover:text-white hover:text-underline py-2 px-4"
+                  href="#Franchises"
                 >
-                  link
-                </a>
-              </li>
-              <li className="mr-3">
-                <a
-                  className="inline-block text-[#f0dcae] no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
-                  href="#"
-                >
-                  link
+                  Top Franchises
                 </a>
               </li>
             </ul>
@@ -103,7 +69,7 @@ export default function Nav() {
               (
             <div
               onClick={handleSignOut}
-              className="bottom-24 bg-opacity-1 rounded-full cursor-pointer xl:p-3 flex justify-center items-center   space-x-3"
+              className="bottom-24 bg-[#f0dcae] bg-opacity-[50%] rounded-full cursor-pointer xl:px-2 xl:py-1 flex justify-center items-center space-x-1"
             >
               <img
                 className=" w-12 h-12 rounded-full border-black border-[2px]
@@ -112,8 +78,8 @@ export default function Nav() {
                 src={user.photoUrl || "/assets/default.jpg"}
               />
               <div className="hidden xl:inline">
-                <h1 className="font-bold  whitespace-nowrap">{user.name}</h1>
-                <h1 className="text-white">@{user.username}</h1>
+                <h1 className="font-bold text-black  whitespace-nowrap">{user.name}</h1>
+                <h1 className="text-[#242424] ">@{user.username}</h1>
               </div>
             </div>)
             }

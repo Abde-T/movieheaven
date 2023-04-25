@@ -2,15 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Josefin+Sans:wght@200;300;400;500;600;700&family=Poppins:wght@200;300;400;500;600;700;800;900&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,100;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,500;1,400;1,700&display=swap');
+
 body {
   background: linear-gradient(60deg, #242424 50%, #ffffff 150%);
 }
 .gradient {
   background: linear-gradient(60deg, #ffffff 0%, #242424 100%);
 }
+
+
 *{
   scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
 ::-webkit-scrollbar {
   width: 10px;
   height: 10px;
@@ -27,4 +35,9 @@ body {
 
 ::-webkit-scrollbar-thumb:hover {
   background: #f0dcae;
+}
+
+.slick-prev, .slick-next{
+  color: black;
+  background-color: #242424;
 }

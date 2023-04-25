@@ -2,6 +2,8 @@ import tmdb from "../api/tmdb";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import ProgressCircle from "@/ui/ProgressCirlce";
+import Slider from "react-slick";
+
 
 export default function Trending() {
   const getPoster = (poster) => {
@@ -18,9 +20,49 @@ export default function Trending() {
     fetchMovies();
   }, []);
 
+  const settings = {
+    dots: false,
+    autoplay: true,
+    infinite: true,
+    arrows:false,
+    speed: 2000, 
+    autoplaySpeed: 2000,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    initialSlide: 0,
+    responsive: [
+      {
+        breakpoint: 1224,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          
+        }
+      },
+      {
+        breakpoint: 1050,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          initialSlide: 2
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 2
+        }
+      }
+
+      
+    ]
+  };
+
   return (
     <>
-      <section className="bg-white border-b py-8">
+      <section className="bg-white border-b py-8" id="Trending">
         <div className="container mx-auto flex flex-wrap pt-4 pb-12">
           <h2 className="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
             Today's pick
@@ -28,27 +70,28 @@ export default function Trending() {
           <div className="w-full mb-4">
             <div className="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
           </div>
-          <div className="w-full  md:w-1/3 p-6 flex items-center flex-wrap flex-grow flex-shrink">
-            {movies.slice(0, 4).map((movie) => (
+          <div className="w-full">
+          <Slider {...settings} key={Date.now()} className="flex ">
+            {movies.map((movie) => (
               <div
-                key={movie.id}
-                className=" md:w-3/6 xl:w-1/4 p-6 w-1/2 flex items-center "
+              key={movie.id}
+              className="flex items-center p-6 justify-center "
               >
-                <div className="relative min-w-[150px] w-[300px] h-[500px]  rounded-t rounded-b-none ">
+                <div className="relative rounded-t rounded-b-none flex flex-col justify-center items-center">
                   <Link
                     href={`/movie/${movie.id}`}
-                    className="flex justify-center flex-wrap no-underline hover:no-underline"
-                  >
+                    className="flex items-center flex-col"
+                    >
                     <div className="relative ">
                       <img
-                        className=" rounded-[20px]"
-                        width={300}
+                        className=" rounded-[20px] w-[300px]"
+                       
                         src={getPoster(movie.backdrop_path)}
-                      />
+                        />
                       <div className="absolute bottom-[-40px] translate-y-[-50%] translate-x-[-50%] right-[-40px]">
                         <ProgressCircle
                           percent={Math.floor(movie.vote_average * 10)}
-                        />
+                          />
                       </div>
                     </div>
                       <div className="w-full font-bold text-xl mt-5 text-gray-800 px-6">
@@ -58,6 +101,8 @@ export default function Trending() {
                 </div>
               </div>
             ))}
+
+            </Slider>
           </div>
         </div>
       </section>

@@ -7,7 +7,7 @@ import Link from "next/link";
 export default function Popular() {
   return (
     <>
-      <section className="bg-gray-200 py-8">
+      <section className="bg-gray-200 py-8" id="Franchises">
         <div className="container mx-auto px-2 pt-4 pb-12 text-gray-800">
           <h2 className="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
             Top Franchises

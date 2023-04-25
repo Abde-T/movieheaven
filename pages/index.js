@@ -6,6 +6,7 @@ import Footer from '@/components/Footer'
 import Trending from '@/components/Trending'
 import Popular from '@/components/Popular'
 
+
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
