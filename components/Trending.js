@@ -119,9 +119,7 @@ export default function Trending() {
             )):
             new Array(8).fill(0).map((_, index) => (
               <div  key={index} className="p-2">
-                <Skeleton variant="rounded" animation="wave" width={210} height={400} >
-                  
-                </Skeleton>
+                <Skeleton variant="rounded" animation="wave" width={210} height={400} />
               </div>
               ))}
 

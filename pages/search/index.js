@@ -69,7 +69,6 @@ export default function search() {
           </div>
           <div className="w-full   md:w-1/3 flex items-center flex-wrap flex-grow flex-shrink">
             {
-              results.length>0 ? 
                 results.map((movie) => (
                   movie.backdrop_path &&
                   <div key={movie.id} className=" md:w-3/6 xl:w-1/4 p-3 w-1/2 flex items-center ">
@@ -97,12 +96,7 @@ export default function search() {
                   </Link>
                 </div>
               </div>
-              )) : 
-              new Array(20).fill(0).map((_, index) => (
-                <div  key={index} className="p-2">
-                  <Skeleton variant="rectangular" width={210} height={300} />
-                </div>
-                ))}
+              ))}
 
           </div>
         </div>
