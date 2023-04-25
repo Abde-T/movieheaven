@@ -64,6 +64,7 @@ export default function SpiderMan() {
           {movies.map((movie) => (
             <section className="mt-8 h-[600px] relative overflow-hidden z-30 bg-black ">
               <img
+              alt="Picture"
                 src={getPoster(movie.poster_path || movie.backdrop_path)}
                 className="w-[100%] h-[700px] absolute object-cover 	opacity-[50%] blur-[15px]"
               />
@@ -75,6 +76,7 @@ export default function SpiderMan() {
                     className="flex justify-center flex-wrap no-underline hover:no-underline"
                   >
                 <img
+                alt="Picture"
                   src={getPoster(movie.backdrop_path)}
                   className="w-[350px] hidden md:block mb-[25%]"
                   />
@@ -86,14 +88,14 @@ export default function SpiderMan() {
                 </h1>
                 <div className="flex items-center space-x-3 md:space-x-5">
                   <button className="text-xs md:text-base bg-[#f9f9f9] text-black flex items-center justify-center py-2.5 px-6 rounded hover:bg-[#c6c6c6]">
-                    <img alt="" className="h-6 md:h-8" />
+                    <img alt="Picture" className="h-6 md:h-8" />
                     <span className="uppercase font-medium tracking-wide">
                       Play
                     </span>
                   </button>
 
                   <button className="text-xs md:text-base bg-black/30 text-[#f9f9f9] border border-[#f9f9f9] flex items-center justify-center py-2.5 px-6 rounded hover:bg-[#c6c6c6]">
-                    <img alt="" className="h-6 md:h-8" />
+                    <img alt="Picture" className="h-6 md:h-8" />
                     <span className="uppercase font-medium tracking-wide">
                       Trailer
                     </span>
@@ -136,6 +138,7 @@ export default function SpiderMan() {
                   >
                    <div className="relative ">
                       <img
+                      alt="Picture"
                         className=" rounded-[20px]"
                         width={300}
                         src={getPoster(movie.backdrop_path)}

@@ -67,12 +67,14 @@ function Movie() {
       <div className="mt-10 relative">
         <section className="relative z-30 bg-black overflow-hidden flex  items-center justify-evenly">
           <img
+          alt="Picture"
             src={getPoster(movie.poster_path || movie.backdrop_path)}
             className="w-[100%] h-[1000px] absolute object-cover 	opacity-[50%] blur-[15px]"
           />
 
           <div className="relative min-h-[calc(100vh-200px)] flex items-center  ">
             <img
+            alt="Picture"
               src={getPoster(movie.backdrop_path)}
               className="w-[350px] hidden md:block"
             />
@@ -83,7 +85,7 @@ function Movie() {
             </h1>
             <div className="flex items-center space-x-3 md:space-x-5">
               <button className="text-xs md:text-base bg-[#f9f9f9] text-black flex items-center justify-center py-2.5 px-6 rounded hover:bg-[#c6c6c6]">
-                <img alt="" className="h-6 md:h-8" />
+                <img alt="Picture" className="h-6 md:h-8" />
                 <span className="uppercase font-medium tracking-wide">
                   Play
                 </span>
@@ -93,7 +95,7 @@ function Movie() {
                 className="text-xs md:text-base bg-black/30 text-[#f9f9f9] border border-[#f9f9f9] flex items-center justify-center py-2.5 px-6 rounded hover:bg-[#c6c6c6]"
                 
               >
-                <img alt="" className="h-6 md:h-8" />
+                <img alt="Picture" className="h-6 md:h-8" />
                 <span className="uppercase font-medium tracking-wide">
                   Trailer
                 </span>

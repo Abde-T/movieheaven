@@ -38,7 +38,7 @@ export default function Popular() {
                 </div>
                 <div className="h-1 w-full gradient my-0 py-0 rounded-t"></div>
                 <div className="bg-black h-full flex items-center">
-                  <Image src={star} width={500} className="mb-[100px] " />
+                  <Image alt="Picture" src={star} width={500} className="mb-[100px] " />
                 </div>
               </div>
               <div className="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
@@ -57,7 +57,7 @@ export default function Popular() {
                   spider-man
                 </div>
                 <div className="h-1 w-full gradient my-0 py-0 rounded-t"></div>
-                <Image src={spider} width={500} className="mt-[80px]" />
+                <Image alt="Picture" src={spider} width={500} className="mt-[80px]" />
               </div>
               <div className="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
                 <div className="flex items-center justify-center">
@@ -76,7 +76,7 @@ export default function Popular() {
                 </div>
                 <div className="h-1 w-full gradient my-0 py-0 rounded-t"></div>
 
-                <Image src={avenger} width={500} />
+                <Image src={avenger} width={500} alt="Picture" />
               </div>
               <div className="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
                 <div className="flex items-center justify-center">

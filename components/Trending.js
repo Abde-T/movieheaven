@@ -97,7 +97,7 @@ export default function Trending() {
                     >
                     <div className="relative ">
                       <img
-                     
+                     alt="Picture"
                         className=" rounded-[20px] w-[300px]"
                        
                         src={getPoster(movie.backdrop_path)}
