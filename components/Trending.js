@@ -5,6 +5,7 @@ import ProgressCircle from "@/ui/ProgressCirlce";
 import Slider from "react-slick";
 import { useDispatch, useSelector } from "react-redux";
 import { openLoginModal } from "@/redux/modalSlice";
+import { Skeleton } from "@mui/material";
 
 
 export default function Trending() {
@@ -84,7 +85,8 @@ export default function Trending() {
           </div>
           <div className="w-full">
           <Slider {...settings} key={Date.now()} className="flex ">
-            {movies.map((movie) => (
+            {movies.length>0 ?
+            movies.map((movie) => (
               <div
               key={movie.id}
               className="flex items-center p-6 justify-center "
@@ -114,7 +116,14 @@ export default function Trending() {
                   </Link>
                 </div>
               </div>
-            ))}
+            )):
+            new Array(8).fill(0).map((_, index) => (
+              <div  key={index} className="p-2">
+                <Skeleton variant="rounded" animation="wave" width={210} height={400} >
+                  
+                </Skeleton>
+              </div>
+              ))}
 
             </Slider>
           </div>

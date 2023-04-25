@@ -8,6 +8,7 @@ import { useEffect, useState } from "react";
 import logo from "../../public/assets/Popcorn.png";
 import Image from "next/image";
 import Trending from "@/components/Trending";
+import { Skeleton } from "@mui/material";
 
 export default function search() {
   const getPoster = (poster) => {
@@ -33,6 +34,8 @@ export default function search() {
     setPage(page + 1);
     fetchResults();
   }
+
+
 
   return (
     <>
@@ -65,8 +68,11 @@ export default function search() {
             <div className="h-1 mx-auto bg-[#f0dcae] w-164 opacity-25 my-0 py-0 rounded-t"></div>
           </div>
           <div className="w-full   md:w-1/3 flex items-center flex-wrap flex-grow flex-shrink">
-            {results.slice(0,12).map((movie) => (
-              <div key={movie.id} className=" md:w-3/6 xl:w-1/4 p-3 w-1/2 flex items-center ">
+            {
+              results.length>0 ? 
+                results.map((movie) => (
+                  movie.backdrop_path &&
+                  <div key={movie.id} className=" md:w-3/6 xl:w-1/4 p-3 w-1/2 flex items-center ">
                 <div className="min-w-[150px] w-[300px] h-[500px]  rounded-t rounded-b-none ">
                   <Link
                     href={`/movie/${movie.id}`}
@@ -91,17 +97,22 @@ export default function search() {
                   </Link>
                 </div>
               </div>
-            ))}
+              )) : 
+              new Array(20).fill(0).map((_, index) => (
+                <div  key={index} className="p-2">
+                  <Skeleton variant="rectangular" width={210} height={300} />
+                </div>
+                ))}
+
           </div>
         </div>
+
       {results.length > 0 
       && 
       <Link  href="/search">
       <button className="border0  rounded-sm w-[100px] h-[50px] bg-[#f0dcae]" onClick={handleClick}>Load More</button>
       </Link>
-      
       }
-      
       </section>
 
       <Trending/>

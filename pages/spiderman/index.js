@@ -62,6 +62,7 @@ export default function SpiderMan() {
     <div className="mt-10 relative">
         <Slider {...settings} key={Date.now()}>
           {movies.map((movie) => (
+             movie.backdrop_path &&
             <section className="mt-8 h-[600px] relative overflow-hidden z-30 bg-black ">
               <img
               alt="Picture"
@@ -130,6 +131,7 @@ export default function SpiderMan() {
           </div>
           <div className="w-full  md:w-1/3 flex items-center flex-wrap flex-grow flex-shrink">
             {movies.map((movie) => (
+               movie.backdrop_path &&
               <div className="md:w-3/6 xl:w-1/4 p-6 w-1/2 flex items-center">
                 <div className="min-w-[150px] w-[300px] h-[500px]  rounded-t rounded-b-none ">
                 <Link

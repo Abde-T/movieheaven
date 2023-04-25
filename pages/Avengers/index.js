@@ -128,6 +128,7 @@ export default function Avengers() {
           </div>
           <div className="w-full  md:w-1/3 flex items-center flex-wrap flex-grow flex-shrink">
             {movies.map((movie) => (
+               movie.backdrop_path &&
               <div className=" md:w-3/6 xl:w-1/4 p-6 w-1/2 flex items-centerk">
                 <div className="min-w-[150px] w-[300px] h-[500px]  rounded-t rounded-b-none ">
                 <Link
