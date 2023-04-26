@@ -33,7 +33,7 @@ export default function SpiderMan() {
     dots: false,
     autoplay: true,
     infinite: true,
-    arrows: true,
+    arrows: false,
   };
 
 

@@ -32,7 +32,7 @@ export default function Avengers() {
     dots: false,
     autoplay: true,
     infinite: true,
-    arrows: true,
+    arrows: false,
   };
 
 

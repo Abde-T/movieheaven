@@ -35,7 +35,7 @@ export default function StarWars() {
     dots: false,
     autoplay: true,
     infinite: true,
-    arrows: true,
+    arrows: false,
   };
 
   return (
