@@ -62,7 +62,7 @@ export default function search() {
       <section className="my-6 flex flex-col justify-center items-center  ">
         <div className="container  mx-auto flex flex-wrap pt-4 pb-12">
           <h2 className="w-full my-2 text-5xl font-bold leading-tight text-left text-[#f0dcae]">
-            Search Result: {query}
+            Search Result: 
           </h2> 
           <div className="w-full mb-4">
             <div className="h-1 mx-auto bg-[#f0dcae] w-164 opacity-25 my-0 py-0 rounded-t"></div>

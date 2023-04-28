@@ -35,7 +35,7 @@ export default function Landing({ data, id }) {
           <div className="text-[#f0dcae]  flex flex-col w-full h-3/5  md:w-2/5 justify-around items-start text-center md:text-left">
             <div className="flex">
 
-            <ul data-aos="fade-right" className="hidden text-xl  absolute top-[-50px] left-0 lg:flex  ">
+            <ul data-aos="fade-right" className="hidden text-xl  absolute top-[-50px] left-0 md:flex  ">
               <li className="mr-3">
                 <a
                   className="inline-block font-bold text-[#f0dcae] no-underline hover:text-white hover:text-underline py-2 px-4"
@@ -83,9 +83,10 @@ export default function Landing({ data, id }) {
             {!username && <LoginModal />}
 
           </div>
-          <div data-aos="zoom-in" className=" w-full md:w-3/5  text-center">
+          <div  className=" w-full md:w-3/5  text-center">
             <Image
-              className="hidden md:block w-[90%]"
+            data-aos="zoom-in"
+              className="hidden lg:block xl:w-[80%] lg:w-[100%] mt-20  "
               width={1000}
               src={bt}
               alt="Picture"

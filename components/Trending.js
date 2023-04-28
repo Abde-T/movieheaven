@@ -39,9 +39,9 @@ export default function Trending() {
     infinite: true,
     arrows:false,
     speed: 2000, 
-    autoplaySpeed: 2000,
+    autoplaySpeed: 10,
     slidesToShow: 4,
-    slidesToScroll: 1,
+    slidesToScroll: 4,
     initialSlide: 0,
     responsive: [
       {

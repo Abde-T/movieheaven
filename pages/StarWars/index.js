@@ -133,7 +133,7 @@ export default function StarWars() {
               movie.backdrop_path &&
               <div
                 key={movie.id}
-                className=" md:w-3/6 xl:w-1/4 p-6 w-1/2 flex items-center"
+                className="  md:w-3/6 xl:w-1/4 p-3 w-1/2 flex items-center"
               >
                 <div className="min-w-[150px] w-[300px] h-[500px]  rounded-t rounded-b-none ">
                   <Link
