@@ -86,7 +86,7 @@ export default function Landing({ data, id }) {
           <div  className=" w-full md:w-3/5  text-center">
             <Image
             data-aos="zoom-in"
-              className="hidden lg:block xl:w-[80%] lg:w-[100%] mt-20  "
+              className="lg:block xl:w-[80%] lg:w-[100%] sm:w-[100%] mt-20  "
               width={1000}
               src={bt}
               alt="Picture"
