@@ -64,6 +64,7 @@ export default function StarWars() {
           {movies.map((movie) => (
             <section className="mt-8 h-[600px] relative overflow-hidden z-30 bg-black ">
               <img
+              loading="lazy"
               alt="Picture"
                 src={getPoster(movie.poster_path || movie.backdrop_path)}
                 className="w-[100%] h-[700px] absolute object-cover 	opacity-[50%] blur-[15px]"
@@ -76,6 +77,7 @@ export default function StarWars() {
                     className="flex justify-center flex-wrap no-underline hover:no-underline"
                   >
                 <img
+                loading="lazy"
                 alt="Picture"
                   src={getPoster(movie.backdrop_path)}
                   className="w-[350px] hidden md:block mb-[25%]"
@@ -142,6 +144,7 @@ export default function StarWars() {
                   >
                     <div className="relative ">
                       <img
+                      loading="lazy"
                       alt="Picture"
                         className=" rounded-[20px]"
                         width={300}

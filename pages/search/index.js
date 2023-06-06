@@ -79,6 +79,7 @@ export default function search() {
                   >
                     <div className="relative">
                     <img
+                    loading="lazy"
                       className="rounded-[20px] border border-[#f0dcae]"
                       alt="poster"
                       width={300}

@@ -101,7 +101,7 @@ export default function Trending() {
                       <img
                      alt="Picture"
                         className=" rounded-[20px] w-[300px]"
-                       
+                        loading="lazy"
                         src={getPoster(movie.backdrop_path)}
                         />
                       <div className="cursor-pointer hover:scale-105 absolute bottom-[-40px] translate-y-[-50%] translate-x-[-50%] right-[-40px]">

@@ -44,6 +44,7 @@ export default function Nav() {
             object-cover 
             "
                 src={user.photoUrl || "/assets/default.jpg"}
+                loading="lazy"
               />
               <div className="hidden xl:inline">
                 <h1 className="font-bold text-black  whitespace-nowrap">{user.name}</h1>

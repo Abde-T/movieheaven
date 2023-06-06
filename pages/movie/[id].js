@@ -68,6 +68,7 @@ function Movie() {
       <div className="mt-10 relative">
         <section className="relative z-30 bg-black overflow-hidden flex  items-center justify-evenly">
           <img
+          loading="lazy"
           alt="Picture"
             src={getPoster(movie.poster_path || movie.backdrop_path)}
             className="w-[100%] h-[1000px] absolute object-cover 	opacity-[50%] blur-[15px]"
@@ -75,6 +76,7 @@ function Movie() {
 
           <div className="relative min-h-[calc(100vh-200px)] flex items-center  ">
             <img
+            loading="lazy"
             alt="Picture"
               src={getPoster(movie.backdrop_path)}
               className="w-[350px] hidden md:block"
