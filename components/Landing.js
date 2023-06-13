@@ -30,7 +30,7 @@ export default function Landing({ data, id }) {
 
   return (
     <>
-      <div  className="pt-24 h-[90vh] flex flex-col justify-around items-center bg-center bg-cover bg-no-repeat  bg-[url('../public/assets/144563.jpg')] ">
+      <div  className="pt-24 h-[90vh] w-full flex flex-col justify-around items-center bg-center bg-cover bg-no-repeat  bg-[url('../public/assets/144563.jpg')] ">
         <div className="container   relative  px-3 mx-auto flex flex-wrap flex-col justify-evenly  h-full md:flex-row items-center">
           <div className="text-[#f0dcae]  flex flex-col w-full h-3/5  md:w-2/5 justify-around items-start text-center md:text-left">
             <div className="flex">
@@ -86,7 +86,7 @@ export default function Landing({ data, id }) {
           <div  className=" w-full md:w-3/5  text-center">
             <Image
             data-aos="zoom-in"
-              className="lg:block xl:w-[80%] lg:w-[100%] sm:w-[100%] mt-20  "
+              className="lg:block xl:w-[80%] xl:visible lg:w-[100%] lg:visible md:w-[100%] md:visible hidden mt-20 "
               width={1000}
               src={bt}
               alt="Picture"
