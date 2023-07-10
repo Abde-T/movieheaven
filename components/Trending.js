@@ -38,10 +38,10 @@ export default function Trending() {
     autoplay: true,
     infinite: true,
     arrows:false,
-    speed: 2000, 
+    speed: 3000, 
     autoplaySpeed: 10,
     slidesToShow: 4,
-    slidesToScroll: 4,
+    slidesToScroll: 2,
     initialSlide: 0,
     responsive: [
       {
