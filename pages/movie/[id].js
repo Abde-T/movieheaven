@@ -1,4 +1,3 @@
-
 import SearchBar from "@/components/SearchBar";
 import ProgressCircle from "@/ui/ProgressCirlce";
 import Image from "next/image";
@@ -45,37 +44,38 @@ function Movie() {
 
   return (
     <>
-      <div className="py-10 relative">
-        <div className="z-40  absolute top-[75%] left-[50%] translate-x-[-50%] translate-y-[-60%]">
+      <div className="py-10 relative ">
+        <div className="z-40 flex justify-around items-center max-[400px]:w-[80%] w-[60%] absolute top-[75%] max-[400px]:left-[40%] left-[45%] translate-x-[-50%] translate-y-[-50%]">
           <Link href="/">
             <Image
-              className="w-[100px] absolute top-[-35%] left-[-70%] z-40 hover:scale-105 "
+              className="w-[100px] hover:scale-105 "
               width={1000}
               src={logo}
               alt="Picture"
             />
           </Link>
-
-          <SearchBar
-            handleClick={handleClick}
-            query={query}
-            setQuery={setQuery}
-          />
+          <div className="w-full">
+            <SearchBar
+              handleClick={handleClick}
+              query={query}
+              setQuery={setQuery}
+            />
+          </div>
         </div>
       </div>
       <div className="mt-10 relative">
         <section className="relative z-30 bg-black overflow-hidden flex  items-center justify-evenly">
           <img
-          loading="lazy"
-          alt="Picture"
+            loading="lazy"
+            alt="Picture"
             src={getPoster(movie.poster_path || movie.backdrop_path)}
             className="w-[100%] h-[1000px] absolute object-cover 	opacity-[50%] blur-[15px]"
           />
 
           <div className="relative min-h-[calc(100vh-200px)] flex items-center  ">
             <img
-            loading="lazy"
-            alt="Picture"
+              loading="lazy"
+              alt="Picture"
               src={getPoster(movie.backdrop_path)}
               className="w-[350px] hidden md:block"
             />
@@ -86,25 +86,19 @@ function Movie() {
             </h1>
             <div className="flex items-center space-x-3 md:space-x-5">
               <button className="text-xs md:text-base bg-[#f9f9f9] text-black flex items-center justify-center py-2.5 px-6 rounded hover:bg-[#c6c6c6]">
-                
                 <span className="uppercase font-medium tracking-wide">
                   Play
                 </span>
               </button>
 
-              <button
-                className="text-xs md:text-base bg-black/30 text-[#f9f9f9] border border-[#f9f9f9] flex items-center justify-center py-2.5 px-6 rounded hover:bg-[#c6c6c6]"
-                
-              >
-               
+              <button className="text-xs md:text-base bg-black/30 text-[#f9f9f9] border border-[#f9f9f9] flex items-center justify-center py-2.5 px-6 rounded hover:bg-[#c6c6c6]">
                 <span className="uppercase font-medium tracking-wide">
                   Trailer
                 </span>
               </button>
               <div className="cursor-pointer hover:scale-105">
-                <ProgressCircle percent={Math.floor(movie.vote_average*10)} />
+                <ProgressCircle percent={Math.floor(movie.vote_average * 10)} />
               </div>
-             
             </div>
 
             <p className="text-xs md:text-xl text-white">
@@ -117,7 +111,7 @@ function Movie() {
             </h4>
           </div>
         </section>
-        <Trending/>
+        <Trending />
       </div>
     </>
   );

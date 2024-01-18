@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <>
       <svg
-        className="wave-top"
+        className="wave-top "
         viewBox="0 0 1439 147"
         version="1.1"
         xmlns="http://www.w3.org/2000/svg"
@@ -32,7 +32,7 @@ export default function Footer() {
           </g>
         </g>
       </svg>
-      <section className="container mx-auto text-center py-6 mb-12">
+      <section className="container mx-auto text-center py-6 bg-[#242424]">
         <div className="w-full flex flex-col  items-center md:flex-row py-6">
           <div className="flex mb-6">
             <Link

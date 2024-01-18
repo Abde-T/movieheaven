@@ -36,24 +36,25 @@ export default function Avengers() {
 
   return (
     <>
-    <div className="py-10 relative">
-      <div className="z-40  absolute top-[75%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
-      <Link href="/">
-                <Image
-                  className="w-[100px] absolute top-[-35%] left-[-50%] z-40 hover:scale-105 "
-                  width={1000}
-                  src={logo}
-                  alt="Picture"
-                />
-              </Link>
-
+    <div className="py-10 relative ">
+        <div className="z-40 flex justify-around items-center max-[400px]:w-[80%] w-[60%] absolute top-[75%] max-[400px]:left-[40%] left-[45%] translate-x-[-50%] translate-y-[-50%]">
+          <Link href="/">
+            <Image
+              className="w-[100px] hover:scale-105 "
+              width={1000}
+              src={logo}
+              alt="Picture"
+            />
+          </Link>
+          <div className="w-full">
           <SearchBar
-          handleClick={handleClick}
-          query={query}
-          setQuery={setQuery}
-          />
+            handleClick={handleClick}
+            query={query}
+            setQuery={setQuery}
+            />
+            </div>
         </div>
-    </div>
+      </div>
     <div className="mt-10 relative">
         <Slider {...settings} key={Date.now()}>
           {movies.map((movie) => (

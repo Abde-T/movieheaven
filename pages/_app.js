@@ -23,8 +23,10 @@ export default function App({ Component, pageProps }) {
   return (
     <Provider store={store}>
       <Nav/>
-      <Component {...pageProps} />
+        <Component {...pageProps} />
+        <div className="bg-[#242424] w-full">
       <Footer/>
+        </div>
     </Provider>
   );
 }

@@ -17,15 +17,16 @@ export default function SpiderMan() {
 
   useEffect(() => {
     const fetchMovies = async () => {
-      const { data } = await tmdb.get("https://api.themoviedb.org/3/search/movie?api_key=5ab490b5f6681ee3678d3ad287d1d366&language=en-US&query=SpiderMan&page=1&include_adult=false");
+      const { data } = await tmdb.get(
+        "https://api.themoviedb.org/3/search/movie?api_key=5ab490b5f6681ee3678d3ad287d1d366&language=en-US&query=SpiderMan&page=1&include_adult=false"
+      );
       setMovies(data.results);
     };
     fetchMovies();
   }, []);
 
   const [query, setQuery] = useState("");
-  function handleClick() {
-  }
+  function handleClick() {}
 
   const settings = {
     dots: false,
@@ -34,130 +35,131 @@ export default function SpiderMan() {
     arrows: false,
   };
 
-
-
   return (
     <>
-    <div className="py-10 relative">
-      <div className="z-40  absolute top-[75%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
-      <Link href="/">
-                <Image
-                  className="w-[100px] absolute top-[-35%] left-[-50%] z-40 hover:scale-105 "
-                  width={1000}
-                  src={logo}
-                  alt="Picture"
-                />
-              </Link>
-
-          <SearchBar
-          handleClick={handleClick}
-          query={query}
-          setQuery={setQuery}
-          />
-        </div>
-    </div>
-    <div className="mt-10 relative">
-        <Slider {...settings} key={Date.now()}>
-          {movies.map((movie) => (
-             movie.backdrop_path &&
-            <section className="mt-8 h-[600px] relative overflow-hidden z-30 bg-black ">
-              <img
-              loading="lazy"
+      <div className="py-10 relative ">
+        <div className="z-40 flex justify-around items-center max-[400px]:w-[80%] w-[60%] absolute top-[75%] max-[400px]:left-[40%] left-[45%] translate-x-[-50%] translate-y-[-50%]">
+          <Link href="/">
+            <Image
+              className="w-[100px] hover:scale-105 "
+              width={1000}
+              src={logo}
               alt="Picture"
-                src={getPoster(movie.poster_path || movie.backdrop_path)}
-                className="w-[100%] h-[700px] absolute object-cover 	opacity-[50%] blur-[15px]"
-              />
-              <div className="flex flex-wrap justify-around items-center ">
-
-              <div className="relative min-h-[calc(100vh-200px)] flex items-center  ">
-              <Link
-                    href={`/movie/${movie.id}`}
-                    className="flex justify-center flex-wrap no-underline hover:no-underline"
-                  >
-                <img
-                loading="lazy"
-                alt="Picture"
-                  src={getPoster(movie.backdrop_path)}
-                  className="w-[350px] hidden md:block mb-[25%]"
+            />
+          </Link>
+          <div className="w-full">
+            <SearchBar
+              handleClick={handleClick}
+              query={query}
+              setQuery={setQuery}
+            />
+          </div>
+        </div>
+      </div>
+      <div className="mt-10 relative">
+        <Slider {...settings} key={Date.now()}>
+          {movies.map(
+            (movie) =>
+              movie.backdrop_path && (
+                <section className="mt-8 h-[600px] relative overflow-hidden z-30 bg-black ">
+                  <img
+                    loading="lazy"
+                    alt="Picture"
+                    src={getPoster(movie.poster_path || movie.backdrop_path)}
+                    className="w-[100%] h-[700px] absolute object-cover 	opacity-[50%] blur-[15px]"
                   />
-                  </Link>
-              </div>
-              <div className=" inset-y-28 md:inset-y-auto md:bottom-10 inset-x-4 md:inset-x-12 space-y-6 z-50 ">
-                <h1 className="text-white text-3xl sm:text-4xl md:text-5xl font-bold">
-                  {movie.title || movie.original_name}
-                </h1>
-                <div className="flex items-center space-x-3 md:space-x-5">
-                  <button className="text-xs md:text-base bg-[#f9f9f9] text-black flex items-center justify-center py-2.5 px-6 rounded hover:bg-[#c6c6c6]">
-                    
-                    <span className="uppercase font-medium tracking-wide">
-                      Play
-                    </span>
-                  </button>
+                  <div className="flex flex-wrap justify-around items-center ">
+                    <div className="relative min-h-[calc(100vh-200px)] flex items-center  ">
+                      <Link
+                        href={`/movie/${movie.id}`}
+                        className="flex justify-center flex-wrap no-underline hover:no-underline"
+                      >
+                        <img
+                          loading="lazy"
+                          alt="Picture"
+                          src={getPoster(movie.backdrop_path)}
+                          className="w-[350px] hidden md:block mb-[25%]"
+                        />
+                      </Link>
+                    </div>
+                    <div className=" inset-y-28 md:inset-y-auto md:bottom-10 inset-x-4 md:inset-x-12 space-y-6 z-50 ">
+                      <h1 className="text-white text-3xl sm:text-4xl md:text-5xl font-bold">
+                        {movie.title || movie.original_name}
+                      </h1>
+                      <div className="flex items-center space-x-3 md:space-x-5">
+                        <button className="text-xs md:text-base bg-[#f9f9f9] text-black flex items-center justify-center py-2.5 px-6 rounded hover:bg-[#c6c6c6]">
+                          <span className="uppercase font-medium tracking-wide">
+                            Play
+                          </span>
+                        </button>
 
-                  <button className="text-xs md:text-base bg-black/30 text-[#f9f9f9] border border-[#f9f9f9] flex items-center justify-center py-2.5 px-6 rounded hover:bg-[#c6c6c6]">
-                    
-                    <span className="uppercase font-medium tracking-wide">
-                      Trailer
-                    </span>
-                  </button>
-                  <div className="cursor-pointer hover:scale-105">
-                    <ProgressCircle
-                      percent={Math.floor(movie.vote_average * 10)}
-                      />
-                  </div>
-                </div>
-
-                <p className="text-xs md:text-xl text-white">
-                  {movie.release_date || movie.first_air_date} •{" "}
-                  {Math.floor(movie.runtime / 60)}h {movie.runtime % 60}m •{" "}
-                </p>
-                <h4 className="text-white text-sm md:text-lg max-w-4xl">
-                  {movie.overview}
-                </h4>
+                        <button className="text-xs md:text-base bg-black/30 text-[#f9f9f9] border border-[#f9f9f9] flex items-center justify-center py-2.5 px-6 rounded hover:bg-[#c6c6c6]">
+                          <span className="uppercase font-medium tracking-wide">
+                            Trailer
+                          </span>
+                        </button>
+                        <div className="cursor-pointer hover:scale-105">
+                          <ProgressCircle
+                            percent={Math.floor(movie.vote_average * 10)}
+                          />
+                        </div>
                       </div>
-              </div>
-            </section>
-          ))}
+
+                      <p className="text-xs md:text-xl text-white">
+                        {movie.release_date || movie.first_air_date} •{" "}
+                        {Math.floor(movie.runtime / 60)}h {movie.runtime % 60}m
+                        •{" "}
+                      </p>
+                      <h4 className="text-white text-sm md:text-lg max-w-4xl">
+                        {movie.overview}
+                      </h4>
+                    </div>
+                  </div>
+                </section>
+              )
+          )}
         </Slider>
       </div>
       <section className="py-8">
         <div className="container mx-auto flex flex-wrap pt-4 pb-12">
           <h2 className="w-full my-2 text-5xl font-bold leading-tight text-center text-[#f0dcae]">
-           Spider Man
+            Spider Man
           </h2>
           <div className="w-full mb-4">
             <div className="h-1 mx-auto bg-[#f0dcae] w-64 opacity-25 my-0 py-0 rounded-t"></div>
           </div>
           <div className="w-full  md:w-1/3 flex items-center flex-wrap flex-grow flex-shrink">
-            {movies.map((movie) => (
-               movie.backdrop_path &&
-              <div className=" md:w-3/6 xl:w-1/4 p-3 w-1/2 flex items-center">
-                <div className="min-w-[150px] w-[300px] h-[500px]  rounded-t rounded-b-none ">
-                <Link
-                    href={`/movie/${movie.id}`}
-                    className="flex justify-center flex-wrap no-underline hover:no-underline"
-                  >
-                   <div className="relative ">
-                      <img
-                      loading="lazy"
-                      alt="Picture"
-                        className=" rounded-[20px]"
-                        width={300}
-                        src={getPoster(movie.backdrop_path)}
-                      />
-                      <div className="cursor-pointer hover:scale-105 absolute bottom-[-40px] translate-y-[-50%] translate-x-[-50%] right-[-40px]">
-                        <ProgressCircle
-                          percent={Math.floor(movie.vote_average * 10)}
-                        />
-                      </div>
+            {movies.map(
+              (movie) =>
+                movie.backdrop_path && (
+                  <div className=" md:w-3/6 xl:w-1/4 p-3 w-1/2 flex items-center">
+                    <div className="min-w-[150px] w-[300px] h-[500px]  rounded-t rounded-b-none ">
+                      <Link
+                        href={`/movie/${movie.id}`}
+                        className="flex justify-center flex-wrap no-underline hover:no-underline"
+                      >
+                        <div className="relative ">
+                          <img
+                            loading="lazy"
+                            alt="Picture"
+                            className=" rounded-[20px]"
+                            width={300}
+                            src={getPoster(movie.backdrop_path)}
+                          />
+                          <div className="cursor-pointer hover:scale-105 absolute bottom-[-40px] translate-y-[-50%] translate-x-[-50%] right-[-40px]">
+                            <ProgressCircle
+                              percent={Math.floor(movie.vote_average * 10)}
+                            />
+                          </div>
+                        </div>
+                        <div className="w-full font-bold text-lg mt-5 text-[#f0dcae] px-6">
+                          {movie.title}
+                        </div>
+                      </Link>
                     </div>
-                    <div className="w-full font-bold text-lg mt-5 text-[#f0dcae] px-6">
-                      {movie.title}
-                    </div>
-                  </Link>
-                </div>
-              </div>
-            ))}
+                  </div>
+                )
+            )}
           </div>
         </div>
       </section>

@@ -28,8 +28,8 @@ export default function Nav() {
             id="nav-content"
           >
             <div className=" absolute right-0 top-[25px]  w-[200px] flex z-20">
-            {!username && <LoginModal />}
             {!username && <SignupModal />}
+            {!username && <LoginModal />}
             </div>
 
             {

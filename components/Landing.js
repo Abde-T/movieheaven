@@ -56,8 +56,8 @@ export default function Landing({ data, id }) {
                   </li>
                 </ul>
               </div>
-              <div className="flex flex-col justify-around border rounded-[50px] h-[80%] md:h-[80%] md:mt-[50px] lg:h-[85%] lg:mt-[35px] p-5 mr-7 shadow-none border-none md:shadow-[#e41212] md:shadow-4xl md:bg-[#38070700]">
-                <div className="flex md:mt-[0px] mt-[-30px]">
+              <div className="flex flex-col justify-around border rounded-[50px] h-[80%] md:h-[80%] md:mt-[50px] lg:h-[100%] lg:mt-[35px] p-5 mr-7 shadow-none border-none md:shadow-[#e41212] md:shadow-4xl md:bg-[#38070700]">
+                <div className="flex md:mt-[0px] mt-[-30px] max-[450px]:mt-[10px]">
                   <Link href="/">
                     <Image
                       data-aos="zoom-in"

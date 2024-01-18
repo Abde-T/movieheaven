@@ -28,7 +28,7 @@ export default function LoginModal() {
     <>
       <button
         id="navAction"
-        className="mx-auto lg:mx-0 hover:underline bg-[#e41212] text-slate-100 font-bold rounded-[20px] mb-4 lg:mb-8 py-1 px-4 shadow  focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
+        className="mx-auto max-[500px]:ml-28 lg:mx-0 hover:underline bg-[#e41212] text-slate-100 font-bold rounded-[20px] mb-4 lg:mb-8 py-1 px-4 shadow  focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
         onClick={() => dispatch(openLoginModal())}
 
      >

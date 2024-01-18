@@ -68,7 +68,7 @@ export default function SignupModal() {
     <>
       <button
         id="navAction"
-        className="mx-auto lg:mx-2 hover:underline  text-[#e41212] border-[#e41212] border-2 font-bold rounded-[20px] mb-4 lg:mb-8 py-1 px-4 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
+        className="mx-auto lg:mx-2 hover:underline max-[500px]:hidden text-[#e41212] border-[#e41212] border-2 font-bold rounded-[20px] mb-4 lg:mb-8 py-1 px-4 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
         onClick={() => dispatch(openSignupModal())}
 
      >
